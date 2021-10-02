@@ -1,0 +1,29 @@
+CREATE TABLE "clan_detail" (
+	"clan_id"	INTEGER NOT NULL UNIQUE,
+	"clan_name"	TEXT NOT NULL,
+	"leader_name"	TEXT NOT NULL,
+	"leader_viewer_id"	INTEGER NOT NULL,
+	"join_condition"	INTEGER NOT NULL,
+	"activity"	INTEGER NOT NULL,
+	"member_num"	INTEGER NOT NULL,
+	"current_period_ranking"	INTEGER NOT NULL,
+	"grade_rank"	INTEGER NOT NULL,
+	PRIMARY KEY("clan_id")
+);
+
+CREATE TABLE "clan_members" (
+            "viewer_id"	INTEGER NOT NULL UNIQUE,
+            "name"	TEXT NOT NULL,
+            "level"	INTEGER NOT NULL,
+            "role"	INTEGER NOT NULL,
+            "total_power"	INTEGER NOT NULL,
+            "join_clan_id"	INTEGER,
+            "join_clan_name"	TEXT,
+			"last_login_time"	TEXT NOT NULL,
+            "join_clan_history"	TEXT,
+            "name_history"	TEXT,
+            "last_refresh_time"	TEXT NOT NULL,
+            PRIMARY KEY("viewer_id")
+);
+
+
